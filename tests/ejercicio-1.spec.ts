@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { Movies, Series, Documentary } from '../src/ejercicio-1/streamingContent';
 import { SeriesCollection } from '../src/ejercicio-1/seriesCollection'
 import { DocumentaryCollection } from '../src/ejercicio-1/documentaryCollection'
