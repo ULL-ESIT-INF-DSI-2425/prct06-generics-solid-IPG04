@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
-    "doc": "typedoc",
+    "doc": "npx typedoc",
     "test": "vitest run",
     "coverage": "vitest run --coverage.include src/* tests/* --coverage"
   },
