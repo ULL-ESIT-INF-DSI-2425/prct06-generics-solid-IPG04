@@ -6,6 +6,9 @@ export abstract class FlyingBird extends Bird {
   abstract fly(): string;
 }
 
+/**
+ * Represents a Sparrow, which is a type of FlyingBird.
+ */
 export class Sparrow extends FlyingBird {
   fly() {
     return "Flying...";
@@ -16,6 +19,9 @@ export class Sparrow extends FlyingBird {
   }
 }
 
+/**
+ * Represents a Penguin, which is a type of Bird.
+ */
 export class Penguin extends Bird {
   makeSound() {
     return "Honk!";

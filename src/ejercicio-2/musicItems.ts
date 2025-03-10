@@ -27,7 +27,16 @@ export class Disc extends MusicItem {
   }
 }
 
+/**
+ * Represents a single music item.
+ * @extends MusicItem
+ */
 export class Single extends MusicItem {
+  /**
+   * Adds a song to the single if it is marked as a single.
+   * @param song - The song to be added.
+   * @throws Will throw an error if the song is not marked as a single.
+   */
   addSong(song: Song): void {
     if (song.single) {
       this.songs.push(song);
