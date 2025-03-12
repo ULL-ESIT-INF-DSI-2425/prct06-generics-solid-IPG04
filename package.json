@@ -6,7 +6,7 @@
     "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
     "doc": "npx typedoc",
     "test": "vitest run",
-    "coverage": "vitest run --coverage.include src/* tests/* --coverage"
+    "coverage": "vitest run --coverage --coverage.include 'src/*' --coverage.exclude 'docs/**/*'"
   },
   "keywords": [],
   "author": "",
