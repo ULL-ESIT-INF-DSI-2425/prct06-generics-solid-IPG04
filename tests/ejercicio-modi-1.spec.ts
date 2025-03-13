@@ -1,7 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { NumericPrintableCollection } from '../src/ejercicio-modi-1/numericPrintableCollection'
 import { StringPrintableCollection} from '../src/ejercicio-modi-1/stringPrintableCollection'
-import { stderr } from 'process';
 
 describe('NumericPrintableCollection', () => {
   let numPrCl: NumericPrintableCollection = new NumericPrintableCollection([4, 7]);
@@ -27,12 +26,18 @@ describe('NumericPrintableCollection', () => {
   })
 
   it ('a numeric printable collection should get items', () => {
-    expect(numPrCl.getItem(1)).toEqual(1);
+    expect(numPrCl.getItem(1)).toBe(1);
     expect(numPrCl.getItem(6)).toBeUndefined;
   })
 
   it ('a numeric printable collection should get the number of items', () => {
     expect(numPrCl.getNumberOfItems()).toEqual(4);
+  })
+
+  it ('a numeric printable collection call certain functions', () => {
+    const spy = vi.spyOn(numPrCl, 'addItem');
+    numPrCl.addItem(3)
+    expect(spy).toHaveBeenCalledWith(3);
   })
 })
 
@@ -60,11 +65,17 @@ describe('StringPrintableCollection', () => {
   })
 
   it ('a string printable collection should get items', () => {
-    expect(strPrCl.getItem('hola')).toEqual('hola');
+    expect(strPrCl.getItem('hola')).toBe('hola');
     expect(strPrCl.getItem('pepe')).toBeUndefined
   })
 
   it ('a string printable collection should get the number of items', () => {
     expect(strPrCl.getNumberOfItems()).toEqual(2);
+  })
+
+  it ('a string printable collection call certain functions', () => {
+    const spy = vi.spyOn(strPrCl, 'addItem');
+    strPrCl.addItem('adios')
+    expect(spy).toHaveBeenCalledWith('adios');
   })
 })
