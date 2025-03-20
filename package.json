@@ -8,6 +8,7 @@
     "test": "vitest run",
     "coverage": "vitest run --coverage --coverage.include 'src/*' --coverage.exclude 'docs/**/*'"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "vitest": "^3.0.5"
   },
   "dependencies": {
-    "@types/node": "^22.13.10"
+    "@types/node": "^22.13.10",
+    "datetime": "^0.0.3"
   }
 }
